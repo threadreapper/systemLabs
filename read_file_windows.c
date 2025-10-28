@@ -1,7 +1,9 @@
 #include <windows.h>
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+    setlocale(0, "Russian");
     HANDLE hFile = CreateFile(
         "file.txt",
         GENERIC_WRITE,

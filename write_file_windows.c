@@ -1,14 +1,16 @@
 #include <windows.h>
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+    setlocale(0, "Russian");
     HANDLE hFile = CreateFile(
-        "file.txt",            // имя файла
-        GENERIC_WRITE,         // доступ на запись
-        0,                     // совместный доступ (нет)
-        NULL,                  // атрибуты безопасности
-        CREATE_ALWAYS,         // создать новый файл или перезаписать
-        FILE_ATTRIBUTE_NORMAL, // обычный файл
+        "file.txt",
+        GENERIC_WRITE,
+        0,
+        NULL,
+        CREATE_ALWAYS,         
+        FILE_ATTRIBUTE_NORMAL, 
         NULL
     );
 
